@@ -11,7 +11,16 @@
 @implementation OddNumbers
 
 - (NSInteger)oddNumbers:(NSArray <NSNumber *> *)array {
-    return -1;
+    
+    NSInteger countOfOddNumbers = 0;
+    
+    for (NSNumber *obj in array) {
+        if (!(obj.intValue % 2 == 0)) {
+            NSLog(@"odd number = %i", obj.intValue);
+            countOfOddNumbers ++;
+        }
+    }
+    NSLog(@"Count of odd numbers = %li", countOfOddNumbers);
+    return countOfOddNumbers;
 }
-
 @end
